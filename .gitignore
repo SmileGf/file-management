@@ -1,7 +1,11 @@
 #idea File
-.mvn/
 .idea/
+*.iml
+*.ipr
+*.iws
+
+#project File
+.mvn/
 target/
 mvnw
 mvnw.cmd
-*.iml
