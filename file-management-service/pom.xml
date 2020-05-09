@@ -13,9 +13,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>file-management-service</name>
     <description>file-management-service project for Spring Boot</description>
-    <modules>
-        <module>file-management-base</module>
-    </modules>
+
     <properties>
         <java.version>1.8</java.version>
     </properties>
