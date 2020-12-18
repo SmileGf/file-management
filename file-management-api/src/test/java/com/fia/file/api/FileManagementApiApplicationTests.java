@@ -1,4 +1,4 @@
-package com.fia.file.web;
+package com.fia.file.api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

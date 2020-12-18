@@ -1,13 +1,13 @@
-package com.fia.file.common;
+package com.fia.file.api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FileManagementCommonApplication {
+public class FileManagementApiApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(FileManagementCommonApplication.class, args);
+        SpringApplication.run(FileManagementApiApplication.class, args);
     }
 
 }
