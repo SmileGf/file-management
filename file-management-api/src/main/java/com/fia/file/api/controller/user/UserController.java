@@ -1,4 +1,4 @@
-package com.fia.file.api.modules.user.controller;
+package com.fia.file.api.controller.user;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -13,7 +13,7 @@ public class UserController {
 
     @RequestMapping("/getTest")
     public String getTest(){
-        return "sucess";
+        return "success";
     }
 
 }

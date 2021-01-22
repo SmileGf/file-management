@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration scan="true" scanPeriod="60 seconds">
+    <property name="file-management" value="/home/app"/>
+    <appender name="A1" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>${base}/logs/file-management/file-management-%d{yyyy-MM-dd}.log.%i</fileNamePattern>
+            <maxHistory>30</maxHistory>
+            <maxFileSize>1GB</maxFileSize>
+        </rollingPolicy>
+
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>[%p %d{yyyy-MM-dd HH:mm:ss.SSS} %logger{50}:%L %t][%X{traceKey}] %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <charset>UTF-8</charset>
+            <pattern>[%p %d{yyyy-MM-dd HH:mm:ss.SSS} %c{1}:%L %t][%X{traceKey}] %m%n</pattern>
+        </encoder>
+    </appender>
+
+    <root level="info">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="A1"/>
+    </root>
+
+</configuration>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.fia.file.dao.MenuDao">
+
+    <insert id="addMenu" parameterType="com.fia.file.entity.MenuDto" keyProperty="menuId" useGeneratedKeys="true">
+        insert into file_management.um_menu(menu_name,parent_id,seq,url,menu_type,status,perms,icon,remark,create_user)
+            values (#{menuName},#{parentId},#{seq},#{url},#{menuType},#{status},#{perms},#{icon},#{remark},#{createUser})
+    </insert>
+
+    <update id="deleteMenu">
+        update file_management.um_menu um set um.is_delete = -1,um.update_user = #{updateUser},um.update_time = now() where um.menu_id in
+        <foreach collection="menuIdList" item="menuId" open="(" separator="," close=")"> #{menuId}</foreach>
+    </update>
+    
+    <select id="selectMenuList" parameterType="java.lang.Integer" resultType="java.util.HashMap">
+        select um.menu_id as menuId,um.menu_name as menuName,um.url as url from file_management.um_menu um
+        <if test="menuId != 0 and menuId != null">
+            where um.parent_id = #{menuId}
+        </if>
+    </select>
+</mapper>

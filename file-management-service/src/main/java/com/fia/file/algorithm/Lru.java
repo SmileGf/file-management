@@ -31,10 +31,8 @@ public class Lru <K,V>{
         int length = 5;
         if(linkedList.size() >= length){
             linkedList.removeLast();
-            linkedList.addFirst(i);
-        }else{
-            linkedList.addFirst(i);
         }
+        linkedList.addFirst(i);
         System.out.println("新增链表2 ： " +linkedList );
     }
 }
