@@ -24,7 +24,7 @@
     <properties>
         <file.management.version>1.0.0-SNAPSHOT</file.management.version>
         <lombok.version>1.18.6</lombok.version>
-        <spring-boot.version>2.2.5.RELEASE</spring-boot.version>
+        <spring-boot.version>2.5.12</spring-boot.version>
         <druid-spring.version>1.1.16</druid-spring.version>
         <mysql-connector.version>8.0.11</mysql-connector.version>
         <mybatis-plus.version>3.1.0</mybatis-plus.version>
